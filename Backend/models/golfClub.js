@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const golfClubSchema = new mongoose.Schema({
+const GolfClubSchema = new mongoose.Schema({
     brand:{type:String, required:true},
     model:{type:String, required:true},
     type:{type:String, required:true},
 });
 
-const GolfClubSchema = mongoose.model('GolfClub', golfClubSchema);
+const GolfClub = mongoose.model('GolfClub', GolfClubSchema);
 module.exports  = GolfClubSchema;
