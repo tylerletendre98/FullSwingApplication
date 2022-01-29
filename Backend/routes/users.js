@@ -8,7 +8,8 @@ router.post('/', async(req,res)=>{
             username:req.body.username,
             email:req.body.email,
             password:req.body.password,
-            fullname:req.body.fullname
+            fullname:req.body.fullname,
+            dexterity:req.body.dexterity
         })
         await user.save();
         return res.send(user)
