@@ -1,5 +1,6 @@
 const express = require('express')
 const User = require('../models/user');
+const GolfClub = require('../models/golfClub')
 const router = express.Router()
 
 router.post('/', async(req,res)=>{
@@ -33,6 +34,22 @@ router.get('/findUser/:userId', async(req,res)=>{
         return res.send(user)
     }catch(ex){
         return res.status(500).send(`Internal Server Error ${ex}.`) 
+    }
+})
+
+router.post('/addGolfClub/:userId', async(req,res)=>{
+    try{
+        const user = await User.findById(req.params.userId)
+        const golfClub = new GolfClub({
+            brand: req.body.brand,
+            model: req.body.model,
+            type: req.body.type
+        })
+        user.golfBag.push(golfClub)
+        user.save()
+        return res.send(user)
+    }catch(ex){
+        return res.status(500).send(`Internal Server Error ${ex}.`)
     }
 })
 
