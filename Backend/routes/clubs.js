@@ -9,7 +9,8 @@ router.post('/newClub/:ownerId', async(req,res)=>{
         const owner = await User.findById(req.params.ownerId)
         const newClub = new Club({
             name:req.body.name,
-            owner:owner.username
+            owner:owner.username,
+            clubPassword: req.body.clubPassword
         })
         await newClub.save()
         return res.send(newClub)
