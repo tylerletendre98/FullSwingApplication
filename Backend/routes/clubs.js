@@ -3,12 +3,12 @@ const Club = require('../models/club');
 const User = require('../models/user');
 const router = express.Router();
 
-router.post('newPost/:ownerId', async(req,res)=>{
+router.post('/newClub/:ownerId', async(req,res)=>{
     try{
         const owner = await User.findById(req.params.ownerId)
         const newClub = new Club({
             name:req.body.name,
-            owner:owner
+            owner:owner.username
         })
         await newClub.save()
         return res.send(newClub)
