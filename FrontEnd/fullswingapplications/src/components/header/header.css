@@ -1,3 +1,30 @@
-.header-container{
-    background-color: lightgreen;
+.header-container {
+  background-color: lightgreen;
+  display: flex;
+  box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header-name {
+  margin-left: 15px;
+}
+
+.header-buttons {
+  position: relative;
+  left: 65%;
+  margin-top: 25px;
+  width: 7.5vw;
+}
+
+.header-buttons button {
+  padding-left: 5px;
+  padding-top: 2.5px;
+  padding-right: 5px;
+  padding-bottom: 2.5px;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: white;
+  width: 100%;
+  background-color: lightgreen;
+  color: whitesmoke;
+  font-size: medium;
 }
