@@ -19,9 +19,9 @@ function LoginForm() {
         </div>
       </div>
       <div className="form-button">
-        <div>
+        <Link to="/profilePage">
           <button>Login</button>
-        </div>
+        </Link>
       </div>
       <div>
         <Link to="/registrationPage">

@@ -1,5 +1,6 @@
 import React from 'react'
 import './registerForm.css'
+import{Link} from 'react-router-dom'
 
 function RegisterForm() {
   return (
@@ -46,8 +47,16 @@ function RegisterForm() {
                         <label htmlFor="">Enter Dexterity:</label>
                     </div>
                     <div>
-                        <input type="select" placeholder='Enter ' />    
+                        <select name="" id="">
+                            <option value="Left">Left Handed</option>
+                            <option value="Right">Right Handed</option>
+                        </select>    
                     </div>
+                </div>
+                <div>
+                    <Link to='/profilePage'>
+                        <button>Register Account</button>
+                    </Link>
                 </div>                    
             </div>
         </div>
