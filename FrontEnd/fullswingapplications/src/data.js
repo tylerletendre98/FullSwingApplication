@@ -4,7 +4,12 @@ let data ={
     "email": "tylerletendre98@gmail.com",
     "password": "Martinbronson1029!",
     "fullname": "Tyler Letendre",
-    "dexterity": "left",
+    "dexterity": "Left",
+    "golfBag":[{
+        "brand":"Titleist",
+        "model":"TS2",
+        "type":"Driver"
+    }],
     "rounds": [
         {
             "holeOne": 4,
