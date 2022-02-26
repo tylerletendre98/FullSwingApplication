@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import UserInfo from "../../components/userInfo/UserInfo";
 
-function ProfilePage() {
-  return (
-    <div>ProfilePage</div>
-  )
+function ProfilePage(props) {
+  return <UserInfo currentLoggedInUser={props.currentLoggedInUser} />;
 }
 
-export default ProfilePage
+export default ProfilePage;

@@ -6,9 +6,11 @@ import LoginPage from "./Pages/loginPage/LoginPage";
 import Header from "./components/header/Header";
 import { useState } from "react";
 import RegistrationPage from "./Pages/registrationPage/RegistrationPage";
+import data from "./data";
 
 function App() {
-  const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
+  const [currentLoggedInUser, setCurrentLoggedInUser] = useState(data);
+  console.log(currentLoggedInUser);
 
   return (
     <div className="App">
