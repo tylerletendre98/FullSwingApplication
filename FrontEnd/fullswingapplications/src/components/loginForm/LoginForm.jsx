@@ -10,13 +10,13 @@ function LoginForm() {
           <label htmlFor="">Username:</label>
         </div>
         <div>
-          <input type="text" placeholder="enter username" />
+          <input type="text" placeholder="Enter username" />
         </div>
         <div>
           <label htmlFor="">Password:</label>
         </div>
         <div>
-          <input type="password" placeholder="enter password" />
+          <input type="password" placeholder="Enter password" />
         </div>
       </div>
       <div className="form-button">
@@ -24,7 +24,7 @@ function LoginForm() {
           <button>Login</button>
         </Link>
       </div>
-      <div>
+      <div className="form-registration">
         <Link to="/registrationPage">
           <p>Create an account</p>
         </Link>
