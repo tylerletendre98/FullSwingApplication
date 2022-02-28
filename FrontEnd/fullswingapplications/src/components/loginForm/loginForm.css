@@ -1,0 +1,32 @@
+.form-container {
+  background-color: rgb(99, 204, 99);
+  border-radius: 15px;
+  width: 15vw;
+  padding-left: 2.5%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form-inputs input {
+  width: 85%;
+  margin-bottom: 15px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.form-inputs label {
+  font-size: large;
+}
+
+.form-button button {
+  width: 50%;
+  height: 25px;
+  font-size: large;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  color: rgb(9, 48, 9);
+  border-style: none;
+  margin-left: 12.5%;
+}
