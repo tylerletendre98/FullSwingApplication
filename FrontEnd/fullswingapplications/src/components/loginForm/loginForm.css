@@ -16,9 +16,14 @@
   border-radius: 5px;
   border-style: none;
   padding-left: 5px;
+  margin-top: 5px;
 }
 
-.form-inputs label {
+.form-inputs {
+  font-size: large;
+}
+
+.form-label {
   font-size: large;
 }
 

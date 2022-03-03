@@ -1,5 +1,5 @@
 .header-container {
-  background-color: lightgreen;
+  background-color: rgb(99, 204, 99);
   display: flex;
   box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -26,6 +26,6 @@
   border-color: white;
   width: 100%;
   background-color: whitesmoke;
-  color: darkgreen;
+  color: rgb(9, 48, 9);
   font-size: medium;
 }

@@ -6,13 +6,13 @@ function LoginForm() {
   return (
     <div className="form-container">
       <div className="form-inputs">
-        <div>
+        <div className="form-label">
           <label htmlFor="">Username:</label>
         </div>
         <div>
           <input type="text" placeholder="Enter username" />
         </div>
-        <div>
+        <div className="form-label">
           <label htmlFor="">Password:</label>
         </div>
         <div>
