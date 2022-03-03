@@ -1,0 +1,60 @@
+.register-form-container {
+  background-color: rgb(99, 204, 99);
+  width: 30vw;
+  margin-left: 10%;
+  box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 25px;
+  margin-top: 15vh;
+}
+
+.form-body {
+  margin-left: 20%;
+}
+
+.input input {
+  margin-top: 5px;
+  width: 85%;
+  border-radius: 5px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.input select {
+  width: 75%;
+  width: 85%;
+  margin-bottom: 25px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: none;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+
+.input {
+  margin-top: 5px;
+  font-size: large;
+}
+
+.form-header {
+  margin-left: 20%;
+}
+
+.register-button button {
+  width: 50%;
+  height: 25px;
+  font-size: large;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  color: rgb(9, 48, 9);
+  border-style: none;
+  margin-left: 12.5%;
+  cursor: pointer;
+  margin-top: 15px;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+}
