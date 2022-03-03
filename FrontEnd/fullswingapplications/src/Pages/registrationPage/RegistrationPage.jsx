@@ -1,12 +1,12 @@
 import React from "react";
 import RegisterForm from "../../components/registerForm/RegisterForm";
 
-function RegistrationPage() {
-  return(
+function RegistrationPage(props) {
+  return (
     <div>
-      <RegisterForm/>
+      <RegisterForm createNewUser={props.createNewUser} />
     </div>
-  ) 
+  );
 }
 
 export default RegistrationPage;

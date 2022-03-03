@@ -7,10 +7,18 @@ import Header from "./components/header/Header";
 import { useState } from "react";
 import RegistrationPage from "./Pages/registrationPage/RegistrationPage";
 import data from "./data";
+import axios from "axios";
 
 function App() {
   const [currentLoggedInUser, setCurrentLoggedInUser] = useState(data);
-  console.log(currentLoggedInUser);
+
+  const createNewUser = (newUser)=>{
+    axios.post('http://localhost:5000/api/users/', newUser)
+    .then((res)=>{
+      setCurrentLoggedInUser(res.data)
+      console.log(currentLoggedInUser)
+    })
+  }
 
   return (
     <div className="App">
@@ -30,7 +38,7 @@ function App() {
               <LoginPage setCurrentLoggedInUser={setCurrentLoggedInUser} />
             }
           />
-          <Route path="/registrationPage" element={<RegistrationPage />} />
+          <Route path="/registrationPage" element={<RegistrationPage createNewUser={createNewUser}/>} />
         </Routes>
       </div>
     </div>
