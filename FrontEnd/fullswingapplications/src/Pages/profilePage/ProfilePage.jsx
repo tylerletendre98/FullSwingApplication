@@ -9,7 +9,7 @@ function ProfilePage(props) {
         <UserInfo currentLoggedInUser={props.currentLoggedInUser} />
       </div>
       <div>
-        <DisplayGolfBag currentLoggedInUser={props.currentLoggedInUser} />
+        <DisplayGolfBag currentLoggedInUser={props.currentLoggedInUser} createGolfClub={props.createGolfClub} />
       </div>
     </div>
   );

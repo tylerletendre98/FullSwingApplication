@@ -20,6 +20,12 @@ function App() {
     })
   }
 
+  const createGolfClub = (golfClub)=>{
+    axios.post(`http://localhost:5000/api/users/addGolfClub/${currentLoggedInUser._id}`, golfClub )
+    .then((res)=>{
+      setCurrentLoggedInUser(res.data)
+    })
+}
   return (
     <div className="App">
       <div>
@@ -30,7 +36,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route
             path="/profilePage"
-            element={<ProfilePage currentLoggedInUser={currentLoggedInUser} />}
+            element={<ProfilePage currentLoggedInUser={currentLoggedInUser} createGolfClub={createGolfClub} />}
           />
           <Route
             path="/loginPage"
