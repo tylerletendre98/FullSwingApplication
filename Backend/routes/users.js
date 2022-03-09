@@ -2,6 +2,7 @@ const express = require('express')
 const User = require('../models/user');
 const GolfClub = require('../models/golfClub')
 const Round = require('../models/round');
+const { status } = require('express/lib/response');
 const router = express.Router()
 
 router.post('/', async(req,res)=>{
@@ -33,6 +34,21 @@ router.get('/findUser/:userId', async(req,res)=>{
     try{
         const user = await User.findById(req.params.userId)
         return res.send(user)
+    }catch(ex){
+        return res.status(500).send(`Internal Server Error ${ex}.`) 
+    }
+})
+
+router.post('/loginUser', async(req,res)=>{
+    try{
+        const users = await User.find()
+        for(i=0; i > users.length ; i++){
+            if(users[i].username === req.body.username && users[i].password === req.body.password){
+                return res.send(users[i])
+            }else{
+                return status(500).send('Wrong username or password')
+            }
+        }
     }catch(ex){
         return res.status(500).send(`Internal Server Error ${ex}.`) 
     }

@@ -10,7 +10,7 @@ import data from "./data";
 import axios from "axios";
 
 function App() {
-  const [currentLoggedInUser, setCurrentLoggedInUser] = useState(data);
+  const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
 
   const createNewUser = (newUser)=>{
     axios.post('http://localhost:5000/api/users/', newUser)
@@ -26,6 +26,14 @@ function App() {
       setCurrentLoggedInUser(res.data)
     })
 }
+  const loginUser =(userInfo)=>{
+    axios.post('http://localhost:5000/api/users/', userInfo)
+    .then((res)=>{
+        setCurrentLoggedInUser(res.data)
+        console.log(currentLoggedInUser)
+    })
+  }
+
   return (
     <div className="App">
       <div>
@@ -34,14 +42,14 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route
+          <Route  
             path="/profilePage"
             element={<ProfilePage currentLoggedInUser={currentLoggedInUser} createGolfClub={createGolfClub} />}
           />
           <Route
             path="/loginPage"
             element={
-              <LoginPage setCurrentLoggedInUser={setCurrentLoggedInUser} />
+              <LoginPage loginUser={loginUser} />
             }
           />
           <Route path="/registrationPage" element={<RegistrationPage createNewUser={createNewUser}/>} />
