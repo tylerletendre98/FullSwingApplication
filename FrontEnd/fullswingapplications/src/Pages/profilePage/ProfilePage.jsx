@@ -3,16 +3,24 @@ import UserInfo from "../../components/userInfo/UserInfo";
 import DisplayGolfBag from "../../components/displayGolfBag/DisplayGolfBag";
 
 function ProfilePage(props) {
-  return (
-    <div>
+  if(props.currentLoggedInUser=== undefined){
+    return(
       <div>
-        <UserInfo currentLoggedInUser={props.currentLoggedInUser} />
+        <h1>Loading</h1>
       </div>
+    )
+  }else{
+    return (
       <div>
-        <DisplayGolfBag currentLoggedInUser={props.currentLoggedInUser} createGolfClub={props.createGolfClub} />
+        <div>
+          <UserInfo currentLoggedInUser={props.currentLoggedInUser} />
+        </div>
+        <div>
+          <DisplayGolfBag currentLoggedInUser={props.currentLoggedInUser} createGolfClub={props.createGolfClub} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default ProfilePage;

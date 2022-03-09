@@ -27,17 +27,20 @@ function App() {
     })
 }
   const loginUser =(userInfo)=>{
-    axios.post('http://localhost:5000/api/users/', userInfo)
+    axios.post('http://localhost:5000/api/users/loginUser', userInfo)
     .then((res)=>{
-        setCurrentLoggedInUser(res.data)
-        console.log(currentLoggedInUser)
+      setCurrentLoggedInUser(res.data)
     })
+  }
+
+  const logOutUser = ()=>{
+    setCurrentLoggedInUser(undefined)
   }
 
   return (
     <div className="App">
       <div>
-        <Header />
+        <Header currentLoggedInUser={currentLoggedInUser} logOutUser={logOutUser}/>
       </div>
       <div>
         <Routes>

@@ -42,11 +42,10 @@ router.get('/findUser/:userId', async(req,res)=>{
 router.post('/loginUser', async(req,res)=>{
     try{
         const users = await User.find()
-        for(i=0; i > users.length ; i++){
+        for(let i=0; i < users.length ; i++){
             if(users[i].username === req.body.username && users[i].password === req.body.password){
+                console.log(users[i])
                 return res.send(users[i])
-            }else{
-                return status(500).send('Wrong username or password')
             }
         }
     }catch(ex){
