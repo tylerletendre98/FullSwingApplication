@@ -16,11 +16,11 @@ function DisplayGolfBag(props) {
   } else {
     return (
       <div>
+          <h3>Golfbag</h3>
         <div>
           {props.currentLoggedInUser.golfBag.map((club) => {
             return (
               <div>
-                <h3>Golfbag</h3>
                 <div>
                   <p>Type: {club.type}</p>
                 </div>
@@ -38,7 +38,7 @@ function DisplayGolfBag(props) {
           <h4>Add another club:</h4>
         </div>
         <div>
-          <GolfClubForm />
+          <GolfClubForm createGolfClub={props.createGolfClub} />
         </div>
       </div>
     );

@@ -44,7 +44,6 @@ router.post('/loginUser', async(req,res)=>{
         const users = await User.find()
         for(let i=0; i < users.length ; i++){
             if(users[i].username === req.body.username && users[i].password === req.body.password){
-                console.log(users[i])
                 return res.send(users[i])
             }
         }

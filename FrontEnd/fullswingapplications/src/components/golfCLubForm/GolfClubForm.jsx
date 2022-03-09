@@ -8,13 +8,16 @@ function GolfClubForm(props) {
     const [clubBrand, setClubBrand] = useState()
     const [clubModel, setClubModel] = useState()
     
-    const addNewClub = ()=>{
+    const addNewClub = (e)=>{
         const newClub = {
             type:clubType,
             brand:clubBrand,
             model:clubModel
         }
         props.createGolfClub(newClub)
+        setClubBrand('')
+        setClubModel('')
+        setClubType('')
     }
 
   return (
@@ -23,21 +26,25 @@ function GolfClubForm(props) {
         <div>
           <label htmlFor="">Select a club:</label>
           <select name="" id="" value={clubType} onChange={(e)=> setClubType(e.target.value)}>
-            <option value="">Driver</option>
-            <option value="">3 Wood</option>
-            <option value="">5 Wood</option>
-            <option value="">2 Hybrid</option>
-            <option value="">3 Hybrid</option>
-            <option value="">4 Hybrid</option>
-            <option value="">5 Hybrid</option>
-            <option value="">Iron set</option>
-            <option value="">Approach Wedge</option>
-            <option value="">Gap Wedge</option>
-            <option value="">Pitching Wedge</option>
-            <option value="">Sand Wedge</option>
-            <option value="">48 Degre</option>
-            <option value="">4 Hybrid</option>
-            <option value="">4 Hybrid</option>
+            <option value="">Select a club</option>
+            <option value="Driver">Driver</option>
+            <option value="3 Wood">3 Wood</option>
+            <option value="5 Wood">5 Wood</option>
+            <option value="2 Hybrid">2 Hybrid</option>
+            <option value="3 Hybrid">3 Hybrid</option>
+            <option value="4 hybrid">4 Hybrid</option>
+            <option value="5 hybrid">5 Hybrid</option>
+            <option value="Iron set">Iron set</option>
+            <option value="Approach Wedge">Approach Wedge</option>
+            <option value="Gap Wedge">Gap Wedge</option>
+            <option value="Pitching Wedge">Pitching Wedge</option>
+            <option value="Sand Wedge">Sand Wedge</option>
+            <option value="48 Degree">48 Degree</option>
+            <option value="52 Degree">52 Degree</option>
+            <option value="56 Degree">56 Degree</option>
+            <option value="58 Degree">58 Degree</option>
+            <option value="60 Degree">60 Degree</option>
+            <option value="Putter">Putter</option>
           </select>
         </div>
         <div>
