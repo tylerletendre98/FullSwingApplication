@@ -7,7 +7,7 @@ function UserInfo(props) {
         <h3>{props.currentLoggedInUser.username}</h3>
       </div>
       <div>
-        <p>{props.currentLoggedInUser.dexterity} handed</p>
+        <p>Plays: {props.currentLoggedInUser.dexterity} handed</p>
       </div>
       <div>
         <p>Total rounds played: {props.currentLoggedInUser.rounds.length}</p>

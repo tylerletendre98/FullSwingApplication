@@ -6,7 +6,6 @@ import LoginPage from "./Pages/loginPage/LoginPage";
 import Header from "./components/header/Header";
 import { useState } from "react";
 import RegistrationPage from "./Pages/registrationPage/RegistrationPage";
-import data from "./data";
 import axios from "axios";
 
 function App() {

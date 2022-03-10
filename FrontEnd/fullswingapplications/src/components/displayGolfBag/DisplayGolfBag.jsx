@@ -1,5 +1,6 @@
 import React from "react";
 import GolfClubForm from "../golfCLubForm/GolfClubForm";
+import './displayGolfBag.css'
 
 function DisplayGolfBag(props) {
   if (props.currentLoggedInUser.golfBag.length === 0) {
@@ -15,30 +16,36 @@ function DisplayGolfBag(props) {
     );
   } else {
     return (
-      <div>
-          <h3>Golfbag</h3>
-        <div>
-          {props.currentLoggedInUser.golfBag.map((club) => {
-            return (
-              <div>
-                <div>
-                  <p>Type: {club.type}</p>
+      <div className="display-golfbag-container">
+        <div className="golfbag-component">
+          <div className="golfbag-title">
+            <h3>Golfbag</h3>
+          </div>
+          <div>
+            {props.currentLoggedInUser.golfBag.map((club) => {
+              return (
+                <div className="golfClub-container">
+                  <div className="golfClub-description">
+                    <p>Type: {club.type}</p>
+                  </div>
+                  <div className="golfClub-description">
+                    <p>Brand: {club.brand}</p>
+                  </div>
+                  <div className="golfClub-description">
+                    <p>Model: {club.model}</p>
+                  </div>
                 </div>
-                <div>
-                  <p>Brand: {club.brand}</p>
-                </div>
-                <div>
-                  <p>Model: {club.model}</p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-        <div>
-          <h4>Add another club:</h4>
-        </div>
-        <div>
-          <GolfClubForm createGolfClub={props.createGolfClub} />
+        <div className="golfbag-component">
+          <div>
+            <h4>Add another club:</h4>
+          </div>
+          <div>
+            <GolfClubForm createGolfClub={props.createGolfClub} />
+          </div>
         </div>
       </div>
     );

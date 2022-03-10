@@ -1,0 +1,24 @@
+.golfClub-container{
+    border-color: black;
+    border-width: 1px;
+    background-color:rgb(99, 204, 99) ;
+    width: 10vw;
+    padding-left: 2.5%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+.golfbag-title{
+    color: rgb(9, 48, 9);
+    padding-left: 3%;
+}
+
+.display-golfbag-container{
+    display: flex;
+}
+
+.golfbag-component{
+    margin-left: 30px;
+}

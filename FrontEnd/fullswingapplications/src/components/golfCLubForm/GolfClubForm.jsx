@@ -22,8 +22,8 @@ function GolfClubForm(props) {
 
   return (
     <div>
-      <div>
-        <div>
+      <div className="golfForm-container">
+        <div className="golfForm-input">
           <label htmlFor="">Select a club:</label>
           <select name="" id="" value={clubType} onChange={(e)=> setClubType(e.target.value)}>
             <option value="">Select a club</option>
