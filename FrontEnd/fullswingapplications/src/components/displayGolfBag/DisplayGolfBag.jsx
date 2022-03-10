@@ -7,7 +7,7 @@ function DisplayGolfBag(props) {
     return (
       <div>
         <div>
-          <h2>You have not set up a golf bag! add clubs below</h2>
+          <h2>You have no clubs in your golf bag! Add clubs below</h2>
         </div>
         <div>
           <GolfClubForm createGolfClub={props.createGolfClub}/>
@@ -40,8 +40,8 @@ function DisplayGolfBag(props) {
           </div>
         </div>
         <div className="golfbag-component">
-          <div>
-            <h4>Add another club:</h4>
+          <div className="golfClub-title">
+            <h4>Add another golf club</h4>
           </div>
           <div>
             <GolfClubForm createGolfClub={props.createGolfClub} />

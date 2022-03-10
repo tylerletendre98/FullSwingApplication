@@ -1,6 +1,7 @@
 import React from "react";
 import UserInfo from "../../components/userInfo/UserInfo";
 import DisplayGolfBag from "../../components/displayGolfBag/DisplayGolfBag";
+import {Link} from 'react-router-dom'
 
 function ProfilePage(props) {
   if(props.currentLoggedInUser=== undefined){

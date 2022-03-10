@@ -7,6 +7,7 @@ import Header from "./components/header/Header";
 import { useState } from "react";
 import RegistrationPage from "./Pages/registrationPage/RegistrationPage";
 import axios from "axios";
+import Clubs from "./Pages/clubs/Clubs";
 
 function App() {
   const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
@@ -55,6 +56,7 @@ function App() {
             }
           />
           <Route path="/registrationPage" element={<RegistrationPage createNewUser={createNewUser}/>} />
+          <Route path="/clubs" element={<Clubs />} />
         </Routes>
       </div>
     </div>

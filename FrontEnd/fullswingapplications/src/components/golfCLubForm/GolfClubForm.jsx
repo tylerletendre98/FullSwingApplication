@@ -47,15 +47,15 @@ function GolfClubForm(props) {
             <option value="Putter">Putter</option>
           </select>
         </div>
-        <div>
-          <label htmlFor="">Enter Club brand</label>
+        <div className="golfForm-input">
+          <label htmlFor="">Enter Club brand:</label>
           <input type="text" name="" id="" value={clubBrand} onChange={(e)=> setClubBrand(e.target.value)}/>
         </div>
-        <div>
-          <label htmlFor="">Enter Club model</label>
+        <div className="golfForm-input">
+          <label htmlFor="">Enter Club model:</label>
           <input type="text" name="" id="" value={clubModel} onChange={(e)=> setClubModel(e.target.value)}/>
         </div>
-        <div>
+        <div className="add-golfClub-button">
             <button onClick={()=> addNewClub()}>Add New Club</button>
         </div>
       </div>
