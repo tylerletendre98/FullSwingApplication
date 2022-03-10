@@ -22,6 +22,7 @@ router.post('/newClub/:ownerId', async(req,res)=>{
 router.get('/getClubs', async(req,res)=>{
     try{    
         const clubs = await Club.find()
+        console.log(clubs)
         return res.send(clubs)
     }catch(ex){
         return res.status(500).send(`Internal Server Error ${ex}.`)

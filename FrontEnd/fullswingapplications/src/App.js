@@ -11,6 +11,7 @@ import Clubs from "./Pages/clubs/Clubs";
 
 function App() {
   const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
+  const [clubs, setClubs] = useState()
 
   const createNewUser = (newUser)=>{
     axios.post('http://localhost:5000/api/users/', newUser)
@@ -47,7 +48,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route  
             path="/profilePage"
-            element={<ProfilePage currentLoggedInUser={currentLoggedInUser} createGolfClub={createGolfClub} />}
+            element={<ProfilePage 
+              currentLoggedInUser={currentLoggedInUser} 
+              createGolfClub={createGolfClub}
+              />}
           />
           <Route
             path="/loginPage"
