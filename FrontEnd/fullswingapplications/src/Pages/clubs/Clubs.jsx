@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import CreateClubForm from "../../components/createClubForm/CreateClubFrom";
 
 function Clubs() {
   return (
-    <div>Clubs</div>
-  )
+    <div>
+      <div>
+        <CreateClubForm />
+      </div>
+    </div>
+  );
 }
 
-export default Clubs
+export default Clubs;
