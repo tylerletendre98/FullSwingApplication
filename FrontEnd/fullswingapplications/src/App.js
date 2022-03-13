@@ -38,6 +38,13 @@ function App() {
     setCurrentLoggedInUser(undefined)
   }
 
+  const createClub = (clubInfo)=>{
+    axios.post(`http://localhost:5000/api/clubs/newClub/${currentLoggedInUser._id}`, clubInfo)
+    .then((res)=>{
+      clubs.push(res.data)
+    })
+  }
+
   return (
     <div className="App">
       <div>
@@ -60,7 +67,7 @@ function App() {
             }
           />
           <Route path="/registrationPage" element={<RegistrationPage createNewUser={createNewUser}/>} />
-          <Route path="/clubs" element={<Clubs />} />
+          <Route path="/clubs" element={<Clubs createClub={createClub}/>} />
         </Routes>
       </div>
     </div>
