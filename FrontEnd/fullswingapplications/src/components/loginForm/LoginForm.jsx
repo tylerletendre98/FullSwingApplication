@@ -47,7 +47,9 @@ function LoginForm(props) {
         </Link>
       </div>
       <div className="form-registration">
-        <p onClick={() => props.setCreatingAccount(true)}>Create an account</p>
+        <p onClick={() => props.setCreatingAccount(true)}>
+          Click here to Create an account
+        </p>
       </div>
     </div>
   );

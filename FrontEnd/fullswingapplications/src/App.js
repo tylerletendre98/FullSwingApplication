@@ -2,10 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/landingPage/LandingPage";
 import ProfilePage from "./Pages/profilePage/ProfilePage";
-import LoginPage from "./Pages/loginPage/LoginPage";
 import Header from "./components/header/Header";
 import { useState } from "react";
-import RegistrationPage from "./Pages/registrationPage/RegistrationPage";
 import axios from "axios";
 import Clubs from "./Pages/clubs/Clubs";
 
@@ -66,13 +64,6 @@ function App() {
               createGolfClub={createGolfClub}
               />}
           />
-          <Route
-            path="/loginPage"
-            element={
-              <LoginPage loginUser={loginUser} />
-            }
-          />
-          <Route path="/registrationPage" element={<RegistrationPage createNewUser={createNewUser}/>} />
           <Route path="/clubs" element={<Clubs createClub={createClub}/>} />
         </Routes>
       </div>
