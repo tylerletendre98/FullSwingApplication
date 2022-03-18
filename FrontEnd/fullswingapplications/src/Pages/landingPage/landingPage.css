@@ -1,0 +1,19 @@
+.landing-page-container {
+  display: flex;
+  width: 100vw;
+}
+
+.landing-page-login {
+  margin-left: 12.5%;
+  margin-top: 20vh;
+}
+
+.landing-page-about {
+  margin-left: 37.5%;
+  margin-top: 25vh;
+}
+
+.landing-page-registration {
+  margin-left: 5%;
+  margin-top: 2.5vh;
+}

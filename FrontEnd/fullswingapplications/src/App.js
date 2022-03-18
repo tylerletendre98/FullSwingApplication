@@ -12,6 +12,7 @@ import Clubs from "./Pages/clubs/Clubs";
 function App() {
   const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
   const [clubs, setClubs] = useState()
+  const [creatingAccount,setCreatingAccount] = useState(false)
 
   const createNewUser = (newUser)=>{
     axios.post('http://localhost:5000/api/users/', newUser)
@@ -52,7 +53,12 @@ function App() {
       </div>
       <div>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage 
+          setCreatingAccount={setCreatingAccount}
+           creatingAccount={creatingAccount}/>}
+           loginUser={loginUser}
+           createNewUser={createNewUser}
+            />
           <Route  
             path="/profilePage"
             element={<ProfilePage 
