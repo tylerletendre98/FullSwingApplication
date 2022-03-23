@@ -31,6 +31,7 @@ function App() {
     .then((res)=>{
       setCurrentLoggedInUser(res.data)
     })
+    console.log(currentLoggedInUser)
   }
 
   const logOutUser = ()=>{
@@ -53,9 +54,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage 
           setCreatingAccount={setCreatingAccount}
-           creatingAccount={creatingAccount}/>}
-           loginUser={loginUser}
-           createNewUser={createNewUser}
+          loginUser={loginUser}
+          createNewUser={createNewUser}
+          creatingAccount={creatingAccount}/>}
             />
           <Route  
             path="/profilePage"
