@@ -22,7 +22,7 @@ function LandingPage(props) {
     return (
       <div className="landing-page-container">
         <div className="landing-page-registration">
-          <RegisterForm createUser={props.createUser} />
+          <RegisterForm createNewUser={props.createNewUser} />
         </div>
         <div className="landing-page-about">
           <h2>About me stuff</h2>

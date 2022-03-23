@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import UserInfo from "../../components/userInfo/UserInfo";
 import DisplayGolfBag from "../../components/displayGolfBag/DisplayGolfBag";
-import DisplayClubs from "../../components/displayClubs/DisplayClubs";
-import axios from "axios";
+import DisplayClubsBelongedTo from "../../components/displayClubsBelongedTo/DisplayClubsBelongedTo";
 import './profilePage.css'
 
 function ProfilePage(props) {
-
-  const [clubs, setClubs] = useState()
-
-  useEffect(()=>{
-    axios.get('http://localhost:5000/api/clubs/getClubs')
-      .then((res)=>{
-        setClubs(res.data)
-      })
-      console.log(clubs)
-  },[])
 
   if(props.currentLoggedInUser=== undefined){
     return(
@@ -34,7 +23,7 @@ function ProfilePage(props) {
             <DisplayGolfBag currentLoggedInUser={props.currentLoggedInUser} createGolfClub={props.createGolfClub} />
           </div>
           <div>
-            <DisplayClubs clubs={clubs}/>
+            <DisplayClubsBelongedTo currentLoggedInUser={props.currentLoggedInUser}/>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
     dexterity:{type:String, required:true},
     golfBag :{type:[GolfClub.schema], default:[]},
     rounds:{type:Array, default:[]},
+    clubsBelongedTo:{type:Array, default:[]},
     dateModified:{type:Date,default:Date.now}
 });
 

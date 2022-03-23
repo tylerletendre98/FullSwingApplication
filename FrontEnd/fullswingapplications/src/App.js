@@ -11,12 +11,20 @@ function App() {
   const [currentLoggedInUser, setCurrentLoggedInUser] = useState();
   const [clubs, setClubs] = useState()
   const [creatingAccount,setCreatingAccount] = useState(false)
+  const [newClubs, setNewClubs]= useState()
 
   const createNewUser = (newUser)=>{
     axios.post('http://localhost:5000/api/users/', newUser)
     .then((res)=>{
       setCurrentLoggedInUser(res.data)
       console.log(currentLoggedInUser)
+    })
+  }
+
+  const getOtherClubs = ()=>{
+    axios.get('http://localhost:5000/api/clubs/getClubs')
+    .then((res)=>{
+      setNewClubs(res.data)
     })
   }
 
@@ -65,7 +73,11 @@ function App() {
               createGolfClub={createGolfClub}
               />}
           />
-          <Route path="/clubs" element={<Clubs createClub={createClub}/>} />
+          <Route path="/clubs" element={<Clubs 
+            createClub={createClub}
+            getOtherClubs={getOtherClubs}
+            newClubs={newClubs}
+          />} />
         </Routes>
       </div>
     </div>

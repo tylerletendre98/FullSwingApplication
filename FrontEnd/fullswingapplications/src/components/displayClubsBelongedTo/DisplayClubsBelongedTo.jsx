@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function DisplayClubs(props) {
-  if (props.clubs === undefined) {
+function DisplayClubsBelongedTo (props) {
+  if (props.currentLoggedInUser.clubsBelongedTo.length === 0) {
     return (
       <div>
-        <h2>Loading clubs</h2>
+        <h2>You dont belong to any clubs click the clubs button to join</h2>
       </div>
     );
   } else {
@@ -15,7 +15,7 @@ function DisplayClubs(props) {
           <h2>Belongs to these clubs</h2>
         </div>
         <div>
-          {props.clubs.map((club) => {
+          {props.currentLoggedInUser.clubsBelongedTo.map((club) => {
             return (
               <div>
                 <div>
@@ -41,4 +41,4 @@ function DisplayClubs(props) {
   }
 }
 
-export default DisplayClubs;
+export default DisplayClubsBelongedTo;

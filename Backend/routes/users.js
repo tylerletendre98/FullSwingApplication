@@ -2,7 +2,7 @@ const express = require('express')
 const User = require('../models/user');
 const GolfClub = require('../models/golfClub')
 const Round = require('../models/round');
-const { status } = require('express/lib/response');
+const Club = require('../models/club')
 const router = express.Router()
 
 router.post('/', async(req,res)=>{
@@ -102,5 +102,6 @@ router.post('/addRound/:userId', async (req,res)=>{
         return res.status(500).send(`Internal Server Error ${ex}.`)
     }
 })
+
 
 module.exports = router;
